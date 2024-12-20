@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <!-- Adicione uma cor branca ao title com importância -->
+    <title style="color: white;">Roteiro Personalizado em Gramado</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('imagem.webp');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            font-family: 'Poppins', sans-serif;
+            color: #ffffff;
+        }
+
+        main {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 1200px;
+            color: #000;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Roteiro Personalizado em Gramado</h1>
+        <p>Crie seu itinerário perfeito selecionando as atividades que mais lhe agradam.</p>
+    </header>
+
+    <main>
+        <!-- Itinerary Form -->
+        <section id="itinerary-form">
+            <h2>Monte Seu Itinerário</h2>
+
+            <!-- Activity Selection -->
+            <div class="form-group">
+                <h3>Atividades Disponíveis</h3>
+                <div class="activity-list" id="activityList">
+                    <!-- Activities will be injected here by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Display Itinerary -->
+        <section id="itinerary-display">
+            <h2>Seu Itinerário</h2>
+            <div id="itineraryDay1" class="day-itinerary">
+                <h3>Dia 1</h3>
+                <!-- Activities for Day 1 will be displayed here -->
+            </div>
+            <div id="itineraryDay2" class="day-itinerary">
+                <h3>Dia 2</h3>
+                <!-- Activities for Day 2 will be displayed here -->
+            </div>
+        </section>
+
+        <!-- Cost Summary -->
+        <section id="cost-summary">
+            <h2>Resumo dos Custos</h2>
+            <p id="totalCost">Custo Total Estimado por Pessoa: <strong>R$ 0,00</strong></p>
+            <button id="resetButton">Resetar para Itinerário Padrão</button>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Aproveite sua viagem personalizada em Gramado!</p>
+    </footer>
+
+    <!-- Modal for Time and Day Selection -->
+    <div id="timeModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Selecione o Dia e Horário</h3>
+            <form id="modalForm">
+                <label for="modalDaySelect">Selecione o Dia:</label>
+                <select id="modalDaySelect">
+                    <option value="1">Dia 1</option>
+                    <option value="2">Dia 2</option>
+                </select>
+
+                <label for="modalTimeInput">Horário:</label>
+                <input type="time" id="modalTimeInput" value="08:00">
+
+                <button type="button" id="confirmBtn">Confirmar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

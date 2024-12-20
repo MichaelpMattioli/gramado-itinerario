@@ -1,0 +1,327 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+}
+
+h1, h2, h3 {
+    color: #2c3e50;
+}
+
+p {
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+header {
+    background-image: url('./holambra-5.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    border: 1px solid #000000;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+}
+
+header p {
+    font-size: 18px;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+#itinerary-form {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Activity List */
+.activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 100%;
+}
+
+.activity-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 5px solid #2980b9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.activity-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.activity-item h4 {
+    font-size: 20px;
+    color: #2980b9;
+    margin-bottom: 10px;
+}
+
+.activity-item p {
+    flex-grow: 1;
+    font-size: 14px;
+    color: #666;
+}
+
+.activity-item .cost {
+    font-weight: bold;
+    margin-top: 10px;
+    color: #27ae60;
+}
+
+.activity-item.selected {
+    background-color: #2980b9;
+    color: white;
+    border-left: 5px solid #fff;
+}
+
+.activity-item.selected h4,
+.activity-item.selected p {
+    color: white;
+}
+
+.activity-item.selected .cost {
+    color: #a4f1a0;
+}
+
+/* Itinerary Display */
+.day-itinerary {
+    background-color: #ecf0f1;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.activity-display {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-left: 5px solid #e67e22;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.activity-display h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #2980b9;
+}
+
+.activity-display p {
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.activity-display .time {
+    font-weight: bold;
+    color: #e67e22;
+}
+
+.activity-display .cost {
+    font-weight: bold;
+    color: #27ae60;
+}
+
+.remove-btn {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    margin-top: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.remove-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.modal-content h3 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.modal-content label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+    color: #34495e;
+}
+
+.modal-content select,
+.modal-content input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.modal-content button {
+    background-color: #2980b9;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.modal-content button:hover {
+    background-color: #1f6391;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: -10px;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Cost Summary */
+#cost-summary {
+    text-align: center;
+    font-size: 22px;
+    color: #27ae60;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #34495e;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .activity-item {
+        flex: 1 1 100%;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+}
+
+
+/* Estilos para o botão de reset */
+#resetButton {
+    background-color: #2980b9;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    margin-top: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#resetButton:hover {
+    background-color: #1f6391;
+}
+
+/* Correção para activity-item não atualizar a cor quando deselecionada */
+.activity-item.selected {
+    background-color: #2980b9;
+    color: white;
+    border-left: 5px solid #fff;
+}
+
+.activity-item.selected h4,
+.activity-item.selected p {
+    color: white;
+}
+
+.activity-item.selected .cost {
+    color: #a4f1a0;
+}
+
+/* Garantir que quando uma atividade não está selecionada, volte às cores originais */
+.activity-item:not(.selected) {
+    background-color: #fff;
+    color: #333;
+}
+
+.activity-item:not(.selected) h4 {
+    color: #2980b9;
+}
+
+.activity-item:not(.selected) p {
+    color: #666;
+}
+
+.activity-item:not(.selected) .cost {
+    color: #27ae60;
+}
